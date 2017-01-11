@@ -4,46 +4,29 @@
 <head>
   <meta charset="utf-8">
   <title>Haberdashacountdown</title>
-  <meta name="generator" content="Google Web Designer 1.7.0.1114">
-  <style type="text/css" id="gwd-text-style">
-    p {
-      margin: 0px;
+  <script>
+    window.onload = function () {
+      var millisecondsPerSecond = 1000;
+      var millisecondsPerMinute = millisecondsPerSecond * 60;
+      var millisecondsPerHour = millisecondsPerMinute * 60;
+      var millisecondsPerDay = millisecondsPerHour * 24;
+
+      var endDate = new Date('6/28/2016');
+      var now = new Date();
+      var deltaDate = now - endDate;
+
+      document.getElementById('daysRemain').innerHTML = Math.floor(deltaDate / millisecondsPerDay);
     }
-    h1 {
-      margin: 0px;
-    }
-    h2 {
-      margin: 0px;
-    }
-    h3 {
-      margin: 0px;
-    }
-  </style>
-  <style type="text/css">
-    html, body {
-      width: 100%;
-      height: 100%;
-      margin: 0px;
-    }
-    body {
-      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-      transform-style: preserve-3d;
-      background-image: none;
-      background-color: rgb(0, 0, 0);
-    }
-    .gwd-h1-1fh6 {
-      text-align: center;
-      border-image-source: none;
-      border-color: rgba(255, 255, 255, 0);
-      color: rgb(245, 242, 242);
-      background-image: none;
-      background-color: rgba(0, 0, 0, 0);
-    }
-  </style>
+  </script>
 </head>
 
-<body class="htmlNoPages">
-  <h1 class="gwd-h1-1fh6">Haberdashasaurus Countdown!</h1>
+<body>
+  <center>
+    <h1>Haberdashasaurus Countdown!</h1>
+    <p>
+      <div id="daysRemain" style="display: inline"></div> Days Remain
+    </p>
+  </center>
 </body>
 
 </html>
