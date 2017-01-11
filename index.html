@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Haberdashacountdown</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
   <script>
     window.onload = function () {
       var millisecondsPerSecond = 1000;
@@ -21,12 +24,15 @@
 </head>
 
 <body>
-  <center>
-    <h1>Haberdashasaurus Countdown!</h1>
-    <p>
-      <div id="daysRemain" style="display: inline"></div> Days Remain
-    </p>
-  </center>
+  <div class="page-header">
+    <h1 class="text-center">Haberdashasaurus Countdown!
+      <br/><small><span id="daysRemain"></span> Days Remain</small>
+    </h1>
+
+  </div>
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
